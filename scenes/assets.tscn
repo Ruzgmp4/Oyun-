@@ -1,0 +1,121 @@
+[gd_scene load_steps=20 format=3 uid="uid://w0r5p7xyulie"]
+
+[ext_resource type="Texture2D" uid="uid://7xmxejrfislk" path="res://assets/MainChar - idle.png" id="1_m7acg"]
+[ext_resource type="Texture2D" uid="uid://bxekin5t2es1d" path="res://assets/Layer_0000_9.png" id="2_unrus"]
+[ext_resource type="Texture2D" uid="uid://ckbg0jwqm4jkf" path="res://assets/Layer_0010_1.png" id="3_wyvsn"]
+[ext_resource type="Texture2D" uid="uid://c6llwfwxydrgr" path="res://assets/Layer_0009_2.png" id="4_wl1ys"]
+[ext_resource type="Texture2D" uid="uid://batwoteb4r8ne" path="res://assets/Layer_0008_3.png" id="5_m8bbc"]
+[ext_resource type="Texture2D" uid="uid://c3hlo8estu6m1" path="res://assets/Layer_0006_4.png" id="6_aihje"]
+[ext_resource type="Texture2D" uid="uid://ddqpfeii62dmd" path="res://assets/Layer_0005_5.png" id="7_743wf"]
+[ext_resource type="Texture2D" uid="uid://dxv8in0wrn735" path="res://assets/Layer_0004_Lights.png" id="8_jsj88"]
+[ext_resource type="Texture2D" uid="uid://bni7fdfg3pqo5" path="res://assets/Layer_0003_6.png" id="9_q3etg"]
+[ext_resource type="Texture2D" uid="uid://b5aagaqwa4q66" path="res://assets/Layer_0002_7.png" id="10_jusqy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nojqt"]
+atlas = ExtResource("1_m7acg")
+region = Rect2(0, 0, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpl3s"]
+atlas = ExtResource("1_m7acg")
+region = Rect2(192, 0, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb4sx"]
+atlas = ExtResource("1_m7acg")
+region = Rect2(384, 0, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnnye"]
+atlas = ExtResource("1_m7acg")
+region = Rect2(576, 0, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xif8f"]
+atlas = ExtResource("1_m7acg")
+region = Rect2(768, 0, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58x51"]
+atlas = ExtResource("1_m7acg")
+region = Rect2(960, 0, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nqk8"]
+atlas = ExtResource("1_m7acg")
+region = Rect2(1152, 0, 192, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7osi"]
+atlas = ExtResource("1_m7acg")
+region = Rect2(1344, 0, 192, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h87pj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nojqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpl3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb4sx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnnye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xif8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58x51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nqk8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7osi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(349, 246)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 5
+position = Vector2(151, 82)
+sprite_frames = SubResource("SpriteFrames_h87pj")
+autoplay = "default"
+
+[node name="Layer00009" type="Sprite2D" parent="."]
+position = Vector2(113, 148)
+texture = ExtResource("2_unrus")
+
+[node name="Layer00101" type="Sprite2D" parent="."]
+position = Vector2(152, 148)
+texture = ExtResource("3_wyvsn")
+
+[node name="Layer00092" type="Sprite2D" parent="."]
+position = Vector2(149, -169)
+texture = ExtResource("4_wl1ys")
+
+[node name="Layer00083" type="Sprite2D" parent="."]
+position = Vector2(152, -222)
+texture = ExtResource("5_m8bbc")
+
+[node name="Layer00064" type="Sprite2D" parent="."]
+position = Vector2(151, -220)
+texture = ExtResource("6_aihje")
+
+[node name="Layer00055" type="Sprite2D" parent="."]
+position = Vector2(109, -220)
+texture = ExtResource("7_743wf")
+
+[node name="Layer0004Lights" type="Sprite2D" parent="."]
+position = Vector2(151, -222)
+texture = ExtResource("8_jsj88")
+
+[node name="Layer00036" type="Sprite2D" parent="."]
+position = Vector2(113, -219)
+texture = ExtResource("9_q3etg")
+
+[node name="Layer00027" type="Sprite2D" parent="."]
+position = Vector2(146, 304)
+texture = ExtResource("10_jusqy")
